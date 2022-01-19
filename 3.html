@@ -4,20 +4,41 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
+
   <input type="button" name="" value="night" onclick="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
 
-  ">
-  <input type="button" name="" value="day" onclick="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
 
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+        alist[i].style.color = 'powderblue';
+        i+=1;
+      }
+
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+        alist[i].style.color = 'blue';
+        i+=1;
+      }
+    }
   ">
+
+
 
   <ol>
     <li><a href="1.html">HTML</a></li>
@@ -30,6 +51,21 @@
     Now Bootstrap is going to say "at the small size, look at classes with -sm- in them and use those. At the medium size, look at classes with -md- in them and use those. At the large size, look at classes with the word -lg- in them and use those.
     The following example will result in a 25%/75% split on small devices, a 50%/50% split on medium devices, and a 33%/66% split on large, xlarge and xxlarge devices. On extra small devices, it will automatically stack
   </p>
+
+  <input type="button" name="" value="night" onclick="
+
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+    }
+  ">
 
 </body>
 </html>
